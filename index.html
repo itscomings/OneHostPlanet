@@ -9,6 +9,8 @@
         для вашего бизнеса</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -298,7 +300,7 @@
         <section class="stock">
             <div class="stock__wrapper">
                 <div class="stock__cards">
-                    <div class="stock__card">
+                    <div class="stock__card stock__card1">
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
                             <div class="stock__card-title">
@@ -311,7 +313,7 @@
                             <p class="stock__card-sale_desc">Акция действует до 30 февраля</p>
                         </div>
                     </div>
-                    <div class="stock__card">
+                    <div class="stock__card stock__card2">
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
                             <div class="stock__card-title">
@@ -324,7 +326,7 @@
                             <p class="stock__card-sale_desc">Акция действует до 30 февраля</p>
                         </div>
                     </div>
-                    <div class="stock__card">
+                    <div class="stock__card stock__card1">
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
                             <div class="stock__card-title">
@@ -340,8 +342,8 @@
                 </div>
             </div>
             <div class="stock__arrow">
-                <a class="w3-left" onclick="">&#8592;</a>
-                <a class="w3-right" onclick="">&#8594;</a>
+                <a class="prev" onclick="flexRow()">❮</a>
+                <a class="next" onclick="flexReverse()">❯</a>
             </div>
             <div class="stock__pay">
                 <div class="stock__pay-title">
@@ -417,5 +419,73 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <form action="#" class="footer__search-form">
+                <div class="footer__input-search">
+                    <div>
+                        <input type="text" class="footer__input-field" placeholder="Подпишитесь на рассылку">
+                        <div>
+                            <img src="img/svg/footer_input_bg.svg" alt="">
+                            <p>Индивидуальные скидки только для подписчиков!</p>
+                        </div>
+                    </div>
+                    <button class="footer__input-button">Подписаться</button>
+                </div>
+            </form>
+            <div class="footer__title">
+                <h2 class="footer__title-text">Современный хостинг</h2>
+                <div>
+                    <form action="">
+                        <button class="header__button"><img class="header__login-img " src="img/svg/login.svg" alt="">Войти
+                            в кабинет
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer__body">
+                <div class="footer__body-column">
+                    <h2 class="footer__body-title">Услуги</h2>
+                    <ul class="footer__body-ul">
+                        <li class="footer__body-li">Домены</li>
+                        <li class="footer__body-li">VPS</li>
+                        <li class="footer__body-li">Выдкленый сервер</li>
+                        <li class="footer__body-li">Хостинг</li>
+                    </ul>
+                </div>
+                <div class="footer__body-column">
+                    <h2 class="footer__body-title">Компания</h2>
+                    <ul class="footer__body-ul">
+                        <li class="footer__body-li">Информация о компании</li>
+                        <li class="footer__body-li">Акции</li>
+                        <li class="footer__body-li">Новости</li>
+                        <li class="footer__body-li">Отзывы</li>
+                        <li class="footer__body-li">Способы оплаты</li>
+                    </ul>
+                </div>
+                <div class="footer__body-column">
+                    <h2 class="footer__body-title">Клиентам</h2>
+                    <ul class="footer__body-ul">
+                        <li class="footer__body-li">Политика конфиденциальности</li>
+                        <li class="footer__body-li">Публичный договор</li>
+                        <li class="footer__body-li">Карта сайта</li>
+                        <li class="footer__body-li">Контакты</li>
+                    </ul>
+                </div>
+                <div class="footer__body-column">
+                    <h2 class="footer__body-title">Контакты</h2>
+                    <div class="footer__body-ul">
+                        <div class="footer__body-li_contacts"><div class="header__link-phone">0 800 33 6782</div></div>
+                        <div class="footer__body-li_contacts"><a href="mailto:info@onehostplanet.com"></a>info@onehostplanet.com</div>
+                        <div class="footer__body-li_contacts"><img src="img/svg/pay_all.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__foot">
+                <p>© Onehostplanet 2018-2022</p>
+                <img src="img/svg/language.svg" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
