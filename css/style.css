@@ -18,6 +18,9 @@
     url('../fonts/rubik-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/rubik-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/rubik-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */ url('../fonts/rubik-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/rubik-v20-latin_cyrillic-regular.svg#Rubik') format('svg'); /* Legacy iOS */
 }
 
+    .owl-theme .owl-nav{
+        text-align: start;
+    }
 /*@media (min-width: 1200px) {*/
     html {
         box-sizing: border-box;
@@ -575,7 +578,6 @@
     .stock__wrapper{
         margin-left: 240px;
         display: flex;
-        flex-direction: row;
     }
 
     .stock__cards{
@@ -588,9 +590,9 @@
 
     .stock__card{
         display: flex;
-        /*background: url("../img/stock_bg1.jpg") no-repeat center;*/
         width: 760px;
         height: 400px;
+        color: white;
     }
 
     .stock__card1{
@@ -601,14 +603,13 @@
     }
 
     .stock__card3{
-        background: url("../img/stock_bg2.jpg") no-repeat center;
+        background: url("../img/stock_bg1.jpg") no-repeat center;
     }
 
-
     .stock__card-base{
-            margin-top: 99px;
-            margin-left: 80px;
-        }
+        margin-top: 99px;
+        margin-left: 80px;
+    }
 
     .stock__card-title{
         margin-top: 30px;
@@ -619,9 +620,11 @@
     }
 
     .stock__card-more{
+        text-decoration: none;
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
+        color: white;
     }
 
     .stock__card-sale{
@@ -629,6 +632,10 @@
         margin-bottom: 30px;
         align-items: end;
         align-content: end;
+    }
+
+    .stock__card-sale img{
+        width: 50%;
     }
 
     .stock__card-sale_desc{

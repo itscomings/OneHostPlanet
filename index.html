@@ -9,11 +9,14 @@
         для вашего бизнеса</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
 
 </head>
 <body>
-    <header class="header">
+
+<header class="header">
         <div class="header__nav">
             <div class="sidenav__list">
                 <div class="sidenav__language"><a href="">UAH</a></div>
@@ -299,14 +302,14 @@
         </section>
         <section class="stock">
             <div class="stock__wrapper">
-                <div class="stock__cards">
+                <div class="owl-carousel owl-theme">
                     <div class="stock__card stock__card1">
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
                             <div class="stock__card-title">
                                 Получи бонус до 10% за пополнение счета!
                             </div>
-                            <a class="stock__card-more">Подробнее</a>
+                            <a href="#" class="stock__card-more">Подробнее</a>
                         </div>
                         <div class="stock__card-sale">
                             <img src="img/svg/stock_hot-sale.svg" alt="">
@@ -319,20 +322,46 @@
                             <div class="stock__card-title">
                                 Получи бонус до 10% за пополнение счета!
                             </div>
-                            <a class="stock__card-more">Подробнее</a>
+                            <a href="#" class="stock__card-more">Подробнее</a>
                         </div>
                         <div class="stock__card-sale">
                             <img src="img/svg/stock_hot-sale.svg" alt="">
                             <p class="stock__card-sale_desc">Акция действует до 30 февраля</p>
                         </div>
                     </div>
-                    <div class="stock__card stock__card1">
+                    <div class="stock__card stock__card3">
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
                             <div class="stock__card-title">
                                 Получи бонус до 10% за пополнение счета!
                             </div>
-                            <a class="stock__card-more">Подробнее</a>
+                            <a href="#" class="stock__card-more">Подробнее</a>
+                        </div>
+                        <div class="stock__card-sale">
+                            <img src="img/svg/stock_hot-sale.svg" alt="">
+                            <p class="stock__card-sale_desc">Акция действует до 30 февраля</p>
+                        </div>
+                    </div>
+                    <div class="stock__card stock__card3">
+                        <div class="stock__card-base">
+                            <img class="stock__icon" src="img/svg/stock_planet.svg" >
+                            <div class="stock__card-title">
+                                Получи бонус до 10% за пополнение счета!
+                            </div>
+                            <a href="#" class="stock__card-more">Подробнее</a>
+                        </div>
+                        <div class="stock__card-sale">
+                            <img src="img/svg/stock_hot-sale.svg" alt="">
+                            <p class="stock__card-sale_desc">Акция действует до 30 февраля</p>
+                        </div>
+                    </div>
+                    <div class="stock__card stock__card3">
+                        <div class="stock__card-base">
+                            <img class="stock__icon" src="img/svg/stock_planet.svg" >
+                            <div class="stock__card-title">
+                                Получи бонус до 10% за пополнение счета!
+                            </div>
+                            <a href="#" class="stock__card-more">Подробнее</a>
                         </div>
                         <div class="stock__card-sale">
                             <img src="img/svg/stock_hot-sale.svg" alt="">
@@ -341,13 +370,10 @@
                     </div>
                 </div>
             </div>
-            <div class="stock__arrow">
-                <a class="prev" onclick="flexRow()">❮</a>
-                <a class="next" onclick="flexReverse()">❯</a>
-            </div>
+
             <div class="stock__pay">
                 <div class="stock__pay-title">
-                    У нас можно оплатить с помощью1
+                    У нас можно оплатить с помощью
                 </div>
                 <div class="stock__pay-payments">
                     <img src="img/svg/pay_visa.svg" alt="" class="stock__pay-logo">
@@ -488,4 +514,8 @@
         </div>
     </footer>
 </body>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/owl.carousel.min.js"></script>
 </html>
