@@ -71,7 +71,7 @@
                 <div class="header__item">
                     <img class="header__language" src="img/svg/language.svg" alt="">
                 </div>
-                <div>
+                <div class="header_login">
                     <form action="">
                         <button class="header__button"><img class="header__login-img " src="img/svg/login.svg" alt="">Войти
                             в кабинет
@@ -152,7 +152,7 @@
                     </button>
                 </div>
             </div>
-            <div class="best__cards">
+            <div class="best__cards owl-carousel owl-theme">
                 <div class="best__card">
                     <div>
                         <h2 class="best__card-title">Business</h2>
@@ -302,7 +302,7 @@
         </section>
         <section class="stock">
             <div class="stock__wrapper">
-                <div class="owl-carousel owl-theme">
+                <div class="stock__cards owl-carousel owl-theme">
                     <div class="stock__card stock__card1">
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
@@ -320,7 +320,7 @@
                         <div class="stock__card-base">
                             <img class="stock__icon" src="img/svg/stock_planet.svg" >
                             <div class="stock__card-title">
-                                Получи бонус до 10% за пополнение счета!
+                                Персональная скидка ждет тебя!
                             </div>
                             <a href="#" class="stock__card-more">Подробнее</a>
                         </div>
@@ -370,7 +370,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="stock__pay">
                 <div class="stock__pay-title">
                     У нас можно оплатить с помощью
@@ -390,7 +389,7 @@
                 </h2>
                 <a href="#" class="news__title-link">Все новости</a>
             </div>
-            <div class="news__cards">
+            <div class="news__cards owl-carousel owl-theme">
                 <div class="news__card">
                     <img src="img/news_photo1.jpg" alt="" class="news__card-img">
                     <div class="news__card-body">
@@ -461,14 +460,15 @@
             </form>
             <div class="footer__title">
                 <h2 class="footer__title-text">Современный хостинг</h2>
-                <div>
-                    <form action="">
-                        <button class="header__button"><img class="header__login-img " src="img/svg/login.svg" alt="">Войти
-                            в кабинет
+                <div >
+                    <form class="footer__login" action="">
+                        <img class="header__login-img" src="img/svg/login.svg" alt=""><button class="footer__button" >
+                            Войти в кабинет
                         </button>
                     </form>
                 </div>
             </div>
+
             <div class="footer__body">
                 <div class="footer__body-column">
                     <h2 class="footer__body-title">Услуги</h2>
@@ -490,7 +490,7 @@
                     </ul>
                 </div>
                 <div class="footer__body-column">
-                    <h2 class="footer__body-title">Клиентам</h2>
+                    <h2 class="footer__body-title"></h2>
                     <ul class="footer__body-ul">
                         <li class="footer__body-li">Политика конфиденциальности</li>
                         <li class="footer__body-li">Публичный договор</li>
@@ -516,6 +516,6 @@
 </body>
 
 <script src="./js/jquery.min.js"></script>
-<script src="./js/script.js"></script>
 <script src="./js/owl.carousel.min.js"></script>
+<script src="./js/script.js" async></script>
 </html>
