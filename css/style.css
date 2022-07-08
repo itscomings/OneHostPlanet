@@ -19,12 +19,6 @@
 }
 
 
-
-    .owl-theme .owl-nav{
-        text-align: start;
-    }
-
-
     html {
         box-sizing: border-box;
     }
@@ -41,7 +35,6 @@
         font-weight: normal;
         background: #F2F2F2;
     }
-
 
     .wrapper {
         max-width: 1540px;
@@ -161,6 +154,11 @@
         text-decoration-color: rgba(255, 255, 255, 0.5);
         color: white;
     }
+
+    .header__menu-button{
+        display: none;
+    }
+
     .dropdown {
         position: relative;
         display: inline-block;
@@ -512,7 +510,9 @@
     }
 
     .leader{
+        display: flex;
         color: #979797;
+        align-items: flex-end;
     }
 
     .leader::after{
@@ -813,13 +813,16 @@
     .news__card-footer{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        align-items: center;
         margin-top: 24px;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: #303030;
+    }
 
+    .news__card-footer > a{
+        margin-left: 160px;
     }
 
     .news__card-footer_img{
@@ -856,12 +859,11 @@
         flex-direction: row-reverse;
         transform: translateY(-100%);
         right:0;
-
     }
 
     .footer__input-search > div:nth-child(1) > div > p{
         transform: translateY(30%) translateX(150%);
-        width: 195px;
+        width: 248px;
     }
 
     .footer__input-field {
@@ -872,6 +874,13 @@
         padding-left: 60px;
         border: none;
         background-color: #ffffff;
+    }
+    .footer__input-discount{
+        display: none;
+    }
+
+    .footer__input-img{
+        transform: translateX(68px);
     }
 
     .footer__input-button {
@@ -927,8 +936,17 @@
         font-size: 20px;
         line-height: 24px;
         color: #FFFFFF;
-
     }
+
+    .footer__body-ul_double{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
     .footer__body-li{
         margin-top: 30px;
         opacity: 0.7;
@@ -954,11 +972,93 @@
         color: #ffffff;
     }
 
+    /* The Overlay (background) */
+    .overlay {
+        height: 0;
+        width: 100vw;
+        position: fixed;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        background-color: #1A2298;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    .overlay__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 30px;
+        margin-top: 58px;
+        margin-right: 30px;
+    }
+
+    .overlay__menu h1 {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 47px;
+        color: white;
+    }
+
+    .overlay-content {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 112px;
+    }
+
+    .overlay-content .overlay__login{
+        display: none;
+    }
+
+    .overlay-content a {
+        margin-top: 80px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #FFFFFF;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .overlay-content .overlay__phone{
+        display: none;
+    }
+
+    .overlay__footer{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 10%;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .overlay__footer a {
+        color: white;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+    }
+
 
 
 /* footer styles end */
 
 @media (max-width: 769px) {
+
+
+    .owl-carousel {
+        width: 738px;!important;
+    }
+
+    .wrapper {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 
     .sidenav__list{
         display: none;
@@ -983,31 +1083,45 @@
         display: none;
     }
 
+    .header__link-phone:hover .dropdown-content {
+        display: none;
+    }
+
+    .header__menu-button{
+        margin-top: 9px;
+        margin-right: 30px;
+        font-size:30px;
+        display: block;
+    }
+
     .header__button {
         display: none;
     }
 
-    .wrapper {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .header__item{
-        margin-right: 30px;
-    }
-
     .header__list-domains {
+        overflow: scroll;
         margin-top: 126px;
         flex-wrap: nowrap;
     }
 
+    .header__item{
+        display: inline-table;
+        margin-right: 30px;
+    }
+
     .header__input-field {
         width: 532px;
+        padding-left: 40px;
     }
 
     /* header+intro styles end */
 
     /* best styles start */
+
+    .best{
+        overflow: hidden;
+    }
+
     .best__wrap {
         margin-left: 30px;
         flex-direction: column;
@@ -1026,13 +1140,23 @@
     }
 
     .best__cards {
+        overflow: scroll;
+        width: 710px;
         margin-left: 30px;
     }
 
+    .stock__card-sale {
+        margin-right: 50px;
+    }
+
     .best__benefits {
-        width: auto;
+        width: 688px;
         grid-template-columns: repeat(2, 1fr);
         margin-left: 30px;
+    }
+
+    .best__benefits-cards {
+        padding-bottom: 40px;
     }
 
 
@@ -1078,12 +1202,18 @@
 
     /* news styles start */
 
+    .news{
+        overflow: hidden;
+    }
+
     .news__wrap {
         margin-left: 30px;
         margin-right: 30px;
-        }
+    }
 
     .news__cards {
+        overflow: scroll;
+        width: 710px;
         margin-left: 30px;
     }
 
@@ -1104,7 +1234,20 @@
 
     .footer__input-field {
         width: 472px;
+        padding-left: 40px;
     }
+
+    .footer__input-discount{
+        height: 100px;
+        display: flex;
+        padding-left: 40px;
+        align-items: center;
+        background-color: #FEF4E9;
+    }
+    .footer__input-discount p{
+        margin-left: 14px;
+    }
+
 
     .footer__body {
         margin-top: 38px;
@@ -1126,8 +1269,312 @@
         margin-right: 0;
     }
 
-    /* footer styles start */
+    .footer__input-search > div:nth-child(1) > div {
+        display: none;
+    }
+    .footer__input-img {
+        transform: none;
+    }
+
+    /* footer styles end */
+
 }
+@media (max-width: 320px) {
+
+
+    .header__logo-pic{
+        margin-top: 8px;
+        height: 80px;
+    }
+
+    .header__logo-text{
+        margin-left: 0;
+        height: 11px;
+    }
+
+    .header__link-phone {
+        display: none;
+    }
+
+    .header__menu-button{
+        width: 30px;
+        margin-right: 20px;
+    }
+
+    .header__menu-button img{
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .overlay__menu .footer__button{
+        display: none;
+    }
+
+    .overlay-content .overlay__login{
+        display: block;
+    }
+
+    .overlay__menu h1 {
+        font-size: 20px;
+    }
+
+    .overlay__menu {
+        margin-top: 29px;
+        margin-right: 20px;
+    }
+
+    .overlay-content {
+        margin-top: 40px;
+    }
+
+    .overlay-content a {
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    .overlay-content .overlay__phone{
+        display: block;
+        font-size: 20px;
+        text-decoration: dashed underline;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 1px;
+        text-decoration-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .overlay .closebtn img{
+        width: 30px;
+    }
+
+    .wrapper{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .intro {
+        padding-top: 120px;
+        max-height: 490px;
+    }
+
+    .intro__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+    .intro__subtitle{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .header__list-domains {
+        height: 24px;
+        margin-top: 63px;
+        flex-wrap: nowrap;
+    }
+    .header__item{
+        display: flex;
+        margin-right: 16px;
+    }
+
+    .header__link-domains_first{
+        font-size: 20px;
+    }
+
+    .header__link-price_first{
+        font-size: 14px;
+    }
+
+    .header__link-domains{
+        font-size: 14px;
+    }
+
+    .header__link-price {
+        font-size: 10px;
+    }
+
+    .header__link-domains_last{
+        font-size: 10px;
+    }
+
+    .header__input-search {
+        display: block;
+        position: relative;
+    }
+
+    .header__input-field {
+        width: 280px;
+        padding-left: 20px;
+    }
+
+    .header__input-field {
+        margin-top: 21px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .header__input-button {
+        margin-top: 0;
+        width: 280px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .header__input-search > div:nth-child(1) > p {
+        position: absolute;
+        transform: translatex(40px);
+        right: 60px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .best__wrap {
+        margin-left: 20px;
+        margin-top: 440px;
+    }
+
+    .best__title {
+        margin-bottom: 40px;
+        width: auto;
+        max-width: none;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .best__list-domains {
+        width: 500px;
+    }
+
+    .best__link-domains_first {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .best__link-domains{
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .best__item-domains {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .best__cards{
+        width: 280px;
+        height: 328px;
+        margin-left: 20px;
+    }
+
+    .best__card{
+        width: 280px;
+        height: 328px;
+        padding: 20px;
+    }
+
+    .best__card_premium{
+        width: 280px;
+        height: 328px;
+        padding: 20px;
+    }
+
+    .best__card-title{
+        padding-bottom: 10px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .best__card-img_business{
+        width: -webkit-fill-available;
+    }
+
+    .best__card-list{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .best__card-items {
+        margin-top: 10px;
+    }
+
+    .best__card-price{
+       margin-top: 10px;
+    }
+
+    .best__card-price_numb{
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .best__card-price_currency{
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .best__card-price_month{
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .best__card-button {
+        margin-top: 10px;
+        width: 240px;
+        height: 50px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .best__benefits {
+        width: 280px;
+        margin-top: 30px;
+        margin-left: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .best__benefits-cards {
+        padding-bottom: 20px;
+    }
+
+    .best__benefits-title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .best__benefits-desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .best__benefits-img {
+        width: 41px;
+    }
+
+    .stock__wrapper {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .stock__card{
+        width: 280px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 
 
 

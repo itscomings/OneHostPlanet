@@ -17,6 +17,40 @@
 <body>
 
 <header class="header">
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <div class="overlay__menu">
+            <h1>Menu</h1>
+            <form class="overlay__login" action="">
+                <button class="footer__button"><img class="header__login-img" src="img/svg/login.svg" alt="">Войти
+                    в кабинет
+                </button>
+            </form>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/svg/nav_menu_colse.svg" alt=""></a>
+            <!-- Overlay content -->
+        </div>
+
+        <!-- Button to close the overlay navigation -->
+
+        <div class="overlay-content">
+            <form class="overlay__login" action="">
+                <button class="footer__button"><img class="header__login-img" src="img/svg/login.svg" alt="">Войти
+                    в кабинет
+                </button>
+            </form>
+            <a href="#">Хостинг</a>
+            <a href="#">VPS</a>
+            <a href="#">Выделенный сервер</a>
+            <a href="#">Домены</a>
+            <a href="#">FAQ</a>
+            <a class="overlay__phone">0 800 33 6782</a>
+        </div>
+        <div class="overlay__footer">
+            <a href="">UAH</a>
+            <img src="img/svg/language.svg" alt="">
+            <img src="img/svg/chat_1.svg" alt="">
+        </div>
+    </div>
         <div class="header__nav">
             <div class="sidenav__list">
                 <div class="sidenav__language"><a href="">UAH</a></div>
@@ -26,12 +60,10 @@
             <nav-list>
                 <div class="header__logo">
                     <a href="/" class="header__logo-link">
-                        <img src="./img/svg/Onehost_logo_img.svg" alt="Discover Amazing places in Japan"
-                             class="header__logo-pic">
+                        <img src="./img/svg/Onehost_logo_img.svg" alt="" class="header__logo-pic">
                     </a>
                     <a href="/" class="header__logo-link">
-                        <img src="./img/svg/Onehost_logo_text.svg" alt="Discover Amazing places in Japan"
-                             class="header__logo-text">
+                        <img src="./img/svg/Onehost_logo_text.svg" alt="" class="header__logo-text">
                     </a>
                 </div>
                 <ul class="header__list">
@@ -68,6 +100,9 @@
                     </ul>
                 </div>
 
+                <!-- Open/show the overlay navigation menu -->
+
+
                 <div class="header__item">
                     <img class="header__language" src="img/svg/language.svg" alt="">
                 </div>
@@ -78,7 +113,9 @@
                         </button>
                     </form>
                 </div>
+                <span class="header__menu-button" onclick="openNav()"><img src="img/svg/nav_menu.svg" alt=""></span>
             </nav-list>
+
         </div>
     </header>
     <main>
@@ -117,7 +154,7 @@
                         <a href="#" class="header__link-price">1327₴</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link-domains_last">все домены</a>
+                        <a href="#" class="header__link-domains header__link-domains_last">все домены</a>
                     </li>
                 </ul>
                 <form action="#" class="search-form">
@@ -127,7 +164,6 @@
                             <p>.com</p>
                         </div>
                         <button class="header__input-button">Найти</button>
-
                     </div>
                 </form>
             </div>
@@ -152,7 +188,7 @@
                     </button>
                 </div>
             </div>
-            <div class="best__cards owl-carousel owl-theme">
+            <div class="best__cards">
                 <div class="best__card">
                     <div>
                         <h2 class="best__card-title">Business</h2>
@@ -389,7 +425,7 @@
                 </h2>
                 <a href="#" class="news__title-link">Все новости</a>
             </div>
-            <div class="news__cards owl-carousel owl-theme">
+            <div class="news__cards">
                 <div class="news__card">
                     <img src="img/news_photo1.jpg" alt="" class="news__card-img">
                     <div class="news__card-body">
@@ -399,10 +435,8 @@
                             И это не преувеличение: если вы хотите продавать и привлекать клиентов,
                             то он вам просто необходим.</p>
                         <div class="news__card-footer">
-                            <div>
                                 <img class="news__card-footer_img" src="img/svg/date.svg" alt="">
                                 4 февраля 2022
-                            </div>
                             <a href="#"><img src="img/svg/news-arrow.svg" alt=""></a>
                         </div>
                     </div>
@@ -416,10 +450,8 @@
                             одного конкретного товара или предложения.
                             Она может располагаться внутри действующего портала…</p>
                         <div class="news__card-footer">
-                            <div>
                                 <img class="news__card-footer_img" src="img/svg/date.svg" alt="">
                                 1 февраля 2022
-                            </div>
                             <a href="#"><img src="img/svg/news-arrow.svg" alt=""></a>
                         </div>
                     </div>
@@ -433,10 +465,8 @@
                             которое служит для идентификации сайта.
                             Обычно оно состоит из букв, но в нем могут применяться и цифры...</p>
                         <div class="news__card-footer">
-                            <div>
                                 <img class="news__card-footer_img" src="img/svg/date.svg" alt="">
                                 26 января 2022
-                            </div>
                             <a href="#"><img src="img/svg/news-arrow.svg" alt=""></a>
                         </div>
                     </div>
@@ -452,11 +482,16 @@
                         <input type="text" class="footer__input-field" placeholder="Подпишитесь на рассылку">
                         <div>
                             <img src="img/svg/footer_input_bg.svg" alt="">
+                            <img class="footer__input-img" src="img/svg/percent.svg" alt="">
                             <p>Индивидуальные скидки только для подписчиков!</p>
                         </div>
                     </div>
                     <button class="footer__input-button">Подписаться</button>
                 </div>
+                <div class="footer__input-discount">
+                <img class="footer__input-img" src="img/svg/percent.svg" alt="">
+                <p>Индивидуальные скидки только для подписчиков!</p>
+            </div>
             </form>
             <div class="footer__title">
                 <h2 class="footer__title-text">Современный хостинг</h2>
@@ -481,21 +516,16 @@
                 </div>
                 <div class="footer__body-column">
                     <h2 class="footer__body-title">Компания</h2>
-                    <ul class="footer__body-ul">
+                    <ul class="footer__body-ul_double">
                         <li class="footer__body-li">Информация о компании</li>
-                        <li class="footer__body-li">Акции</li>
-                        <li class="footer__body-li">Новости</li>
-                        <li class="footer__body-li">Отзывы</li>
-                        <li class="footer__body-li">Способы оплаты</li>
-                    </ul>
-                </div>
-                <div class="footer__body-column">
-                    <h2 class="footer__body-title"></h2>
-                    <ul class="footer__body-ul">
                         <li class="footer__body-li">Политика конфиденциальности</li>
+                        <li class="footer__body-li">Акции</li>
                         <li class="footer__body-li">Публичный договор</li>
+                        <li class="footer__body-li">Новости</li>
                         <li class="footer__body-li">Карта сайта</li>
+                        <li class="footer__body-li">Отзывы</li>
                         <li class="footer__body-li">Контакты</li>
+                        <li class="footer__body-li">Способы оплаты</li>
                     </ul>
                 </div>
                 <div class="footer__body-column">
