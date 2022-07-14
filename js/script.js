@@ -1,15 +1,5 @@
 $(document).ready(function () {
 
-    // $('.best__cards').owlCarousel({
-    //         slideTransition: "linear" ,
-    //         margin: 20,
-    //         response: false,
-    //         dots: false,
-    //         autoWidth: true,
-    //         navElement: "arrow",
-    //     }
-    // );
-
     $('.stock__cards').owlCarousel({
             slideTransition: "linear",
             loop: true,
@@ -17,19 +7,10 @@ $(document).ready(function () {
             nav: true,
             dots: false,
             autoWidth: true,
-            navElement: "arrow",
+
+            navText: ['<img src="img/svg/news-arrow-left.svg">', '<img src="img/svg/news-arrow-right.svg">'],
         }
     );
-
-    // $('.news__cards').owlCarousel({
-    //         slideTransition: "linear",
-    //         margin: 20,
-    //         response: false,
-    //         dots: false,
-    //         autoWidth: true,
-    //         navElement: "arrow",
-    //     }
-    // );
 
 })
     /* Open nav-menu */
