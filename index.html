@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<header class="header">
+<header id="header" class="header">
     <!-- The overlay -->
     <div id="myNav" class="overlay">
         <div class="overlay__menu">
@@ -44,17 +44,39 @@
             <a href="#">FAQ</a>
             <a class="overlay__phone">0 800 33 6782</a>
         </div>
+
         <div class="overlay__footer">
-            <a href="">UAH</a>
+            <div class="sidenav__dropdown">
+                <button class="sidenav__dropbtn">UAH</button>
+                <div class="sidenav__dropdown-content">
+                    <a href="#">UAH</a>
+                    <a href="#">RUB</a>
+                    <a href="#">USD</a>
+                    <a href="#">EUR</a>
+                </div>
+            </div>
             <img src="img/svg/language.svg" alt="">
             <img src="img/svg/chat_1.svg" alt="">
         </div>
     </div>
         <div class="header__nav">
             <div class="sidenav__list">
-                <div class="sidenav__language"><a href="">UAH</a></div>
+                <div class="sidenav__language">
+                    <div class="sidenav__dropdown">
+                        <button class="sidenav__dropbtn">UAH</button>
+                        <div class="sidenav__dropdown-content">
+                            <a href="#">UAH</a>
+                            <a href="#">RUB</a>
+                            <a href="#">USD</a>
+                            <a href="#">EUR</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="sidenav__chat"><img src="./img/svg/chat_1.svg" alt=""></div>
-                <div class="sidenav__up"><a href=""><img src="./img/svg/right-arrow.svg" alt="">Наверх</a></div>
+                <div class="sidenav__up">
+                    <img src="./img/svg/right-arrow.svg" alt="">
+                    <a href="#header">Наверх</a>
+                </div>
             </div>
             <nav-list>
                 <div class="header__logo">
@@ -65,56 +87,51 @@
                         <img src="./img/svg/Onehost_logo_text.svg" alt="" class="header__logo-text">
                     </a>
                 </div>
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="#" class="header__link">Хостинг</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">VPS</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">Выделенный сервер</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">Домены</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#" class="header__link">FAQ</a>
-                    </li>
-                </ul>
-
-                <!-- Show the hover phone menu -->
-
-                <div class="header__link-phone">0 800 33 6782
-                    <ul class="dropdown-content">
-                        <li>
-                            <div class="dropdown-content__phone-first">0 800 33 6782</div>
+                <div>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link">Хостинг</a>
                         </li>
-                        <li>
-                            <div class="dropdown-content__phone-second">044 333 45 32</div>
+                        <li class="header__item">
+                            <a href="#" class="header__link">VPS</a>
                         </li>
-                        <li>
-                            <div class="dropdown-content__callback">Обратный звонок</div>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Выделенный сервер</a>
                         </li>
-                        <li>
-                            <div class="dropdown-content__mail">info@onehostplanet.com</div>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Домены</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">FAQ</a>
                         </li>
                     </ul>
                 </div>
 
+
+                <!-- Show the hover phone menu -->
+
+                <div class="dropdown">
+                    <button class="dropbtn">0 800 33 6782</button>
+                    <div class="dropdown-content">
+                        <a href="tel:044 333 45 32">044 333 45 32</a>
+                        <a href="#">Обратный звонок</a>
+                        <a href="mailto:info@onehostplanet.com">info@onehostplanet.com</a>
+                    </div>
+                </div>
+
                 <div class="header__link-wrap">
-                    <div class="header__item">
-                        <img class="header__language" src="img/svg/language.svg" alt="">
+                    <div class="header__language">
+                        <img class="header__language-img" src="img/svg/language.svg" alt="">
                     </div>
                     <div class="header_login">
                         <form action="">
-                            <button class="header__button"><img class="header__login-img " src="img/svg/login.svg" alt="">Войти
-                                в кабинет
+                            <button class="header__button">
+                                <img class="header__login-img " src="img/svg/login.svg" alt="">
+                                Войти в кабинет
                             </button>
                         </form>
                     </div>
                 </div>
-
 
                 <!-- Open/show the overlay navigation menu -->
 
@@ -194,157 +211,156 @@
                         </li>
                     </ul>
                 </div>
+                <div class="best__cards">
+                    <div class="best__card">
+                        <div>
+                            <h2 class="best__card-title">Business</h2>
+                        </div>
+                        <div>
+                            <img src="img/svg/line_business.svg" alt="" class="best__card-img_business">
+                        </div>
+                        <div class="best__card-body">
+                            <ul class="best__card-list">
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Трафик</p>
+                                    <p class="best__card-items_tariff last">Безлимит</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Место на диске</p>
+                                    <p class="best__card-items_tariff">5GB</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Количество сайтов<img src="img/svg/answer.svg" alt=""></p>
 
-            </div>
-            <div class="best__cards">
-                <div class="best__card">
-                    <div>
-                        <h2 class="best__card-title">Business</h2>
+                                    <p class="best__card-items_tariff">4</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">PHP Memory_limit</p>
+                                    <p class="best__card-items_tariff">256</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best__card-price">
+                            <p class="best__card-price_numb">89</p>
+                            <p class="best__card-price_currency">₴</p>
+                            <p class="best__card-price_month">/ месяц</p>
+                        </div>
+                        <button class="best__card-button">Заказать</button>
                     </div>
-                    <div>
-                        <img src="img/svg/line_business.svg" alt="" class="best__card-img_business">
+                    <div class="best__card_premium">
+                        <div>
+                            <h2 class="best__card-title">Premium</h2>
+                        </div>
+                        <div>
+                            <img src="img/svg/line_premium.svg" alt="" class="best__card-img_business">
+                        </div>
+                        <div class="best__card-body">
+                            <ul class="best__card-list">
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Трафик</p>
+                                    <p class="best__card-items_tariff">Безлимит</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Место на диске</p>
+                                    <p class="best__card-items_tariff">15GB</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Количество сайтов<img src="img/svg/answer.svg" alt=""></p>
+                                    <p class="best__card-items_tariff">15</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">PHP Memory_limit</p>
+                                    <p class="best__card-items_tariff">512</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best__card-price">
+                            <p class="best__card-price_numb">278</p>
+                            <p class="best__card-price_currency">₴</p>
+                            <p class="best__card-price_month">/ месяц</p>
+                        </div>
+                        <button class="best__card-button">Заказать</button>
                     </div>
-                    <div class="best__card-body">
-                        <ul class="best__card-list">
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Трафик</p>
-                                <p class="best__card-items_tariff last">Безлимит</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Место на диске</p>
-                                <p class="best__card-items_tariff">5GB</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Количество сайтов<img src="img/svg/answer.svg" alt=""></p>
-
-                                <p class="best__card-items_tariff">4</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">PHP Memory_limit</p>
-                                <p class="best__card-items_tariff">256</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="best__card-price">
-                        <p class="best__card-price_numb">89</p>
-                        <p class="best__card-price_currency">₴</p>
-                        <p class="best__card-price_month">/ месяц</p>
-                    </div>
-                    <button class="best__card-button">Заказать</button>
-                </div>
-                <div class="best__card_premium">
-                    <div>
-                        <h2 class="best__card-title">Premium</h2>
-                    </div>
-                    <div>
-                        <img src="img/svg/line_premium.svg" alt="" class="best__card-img_business">
-                    </div>
-                    <div class="best__card-body">
-                        <ul class="best__card-list">
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Трафик</p>
-                                <p class="best__card-items_tariff">Безлимит</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Место на диске</p>
-                                <p class="best__card-items_tariff">15GB</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Количество сайтов<img src="img/svg/answer.svg" alt=""></p>
-                                <p class="best__card-items_tariff">15</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">PHP Memory_limit</p>
-                                <p class="best__card-items_tariff">512</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="best__card-price">
-                        <p class="best__card-price_numb">278</p>
-                        <p class="best__card-price_currency">₴</p>
-                        <p class="best__card-price_month">/ месяц</p>
-                    </div>
-                    <button class="best__card-button">Заказать</button>
-                </div>
-                <div class="best__card">
-                    <div>
-                        <h2 class="best__card-title">Powerful</h2>
-                    </div>
-                    <div>
-                        <img src="img/svg/line_powerfull.svg" alt="" class="best__card-img_business">
-                    </div>
-                    <div class="best__card-body">
-                        <ul class="best__card-list">
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Трафик</p>
-                                <p class="best__card-items_tariff">Безлимит</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Место на диске</p>
-                                <p class="best__card-items_tariff">10GB</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">Количество сайтов<img src="img/svg/answer.svg" alt=""></p>
-                                <p class="best__card-items_tariff">10</p>
-                            </li>
-                            <li class="best__card-items">
-                                <p class="best__card-items_name leader">PHP Memory_limit</p>
-                                <p class="best__card-items_tariff">384</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="best__card-price">
-                        <p class="best__card-price_numb">157</p>
-                        <p class="best__card-price_currency">₴</p>
-                        <p class="best__card-price_month">/ месяц</p>
-                    </div>
-                    <button class="best__card-button">Заказать</button>
-                </div>
-            </div>
-            <div class="best__benefits">
-                <div class="best__benefits-cards">
-                    <img src="img/svg/database.svg" alt="" class="best__benefits-img">
-                    <div class="best__benefits-body">
-                        <p class="best__benefits-title">Надежность</p>
-                        <p class="best__benefits-desc">
-                            OneHostPlanet – это команда, которая не оставляет сайты своих клиентов
-                            без присмотра ни на одну из 86400 секунд в сутках
-                        </p>
+                    <div class="best__card">
+                        <div>
+                            <h2 class="best__card-title">Powerful</h2>
+                        </div>
+                        <div>
+                            <img src="img/svg/line_powerfull.svg" alt="" class="best__card-img_business">
+                        </div>
+                        <div class="best__card-body">
+                            <ul class="best__card-list">
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Трафик</p>
+                                    <p class="best__card-items_tariff">Безлимит</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Место на диске</p>
+                                    <p class="best__card-items_tariff">10GB</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">Количество сайтов<img src="img/svg/answer.svg" alt=""></p>
+                                    <p class="best__card-items_tariff">10</p>
+                                </li>
+                                <li class="best__card-items">
+                                    <p class="best__card-items_name leader">PHP Memory_limit</p>
+                                    <p class="best__card-items_tariff">384</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="best__card-price">
+                            <p class="best__card-price_numb">157</p>
+                            <p class="best__card-price_currency">₴</p>
+                            <p class="best__card-price_month">/ месяц</p>
+                        </div>
+                        <button class="best__card-button">Заказать</button>
                     </div>
                 </div>
-                <div class="best__benefits-cards">
-                    <img src="img/svg/web-hosting.svg" alt="" class="best__benefits-img">
-                    <div class="best__benefits-body">
-                        <p class="best__benefits-title">Качество</p>
-                        <p class="best__benefits-desc">
-                            Хостинг – неотъемлемая составляющая вашего успеха. Быстрое и комфортное,
-                            безопасное посещение сайта для ваших клиентов
-                        </p>
+                <div class="best__benefits">
+                    <div class="best__benefits-cards">
+                        <img src="img/svg/database.svg" alt="" class="best__benefits-img">
+                        <div class="best__benefits-body">
+                            <p class="best__benefits-title">Надежность</p>
+                            <p class="best__benefits-desc">
+                                OneHostPlanet – это команда, которая не оставляет сайты своих клиентов
+                                без присмотра ни на одну из 86400 секунд в сутках
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="best__benefits-cards">
-                    <img src="img/svg/speedometer.svg" alt="" class="best__benefits-img">
-                    <div class="best__benefits-body">
-                        <p class="best__benefits-title">Скорость</p>
-                        <p class="best__benefits-desc">
-                            Вы всегда сможете посчитать, насколько
-                            увеличится ваша конверсия после переезда к нам
-                        </p>
+                    <div class="best__benefits-cards">
+                        <img src="img/svg/web-hosting.svg" alt="" class="best__benefits-img">
+                        <div class="best__benefits-body">
+                            <p class="best__benefits-title">Качество</p>
+                            <p class="best__benefits-desc">
+                                Хостинг – неотъемлемая составляющая вашего успеха. Быстрое и комфортное,
+                                безопасное посещение сайта для ваших клиентов
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="best__benefits-cards">
-                    <img src="img/svg/networking.svg" alt="" class="best__benefits-img">
-                    <div class="best__benefits-body">
-                        <p class="best__benefits-title">Техподдержка 24/7</p>
-                        <p class="best__benefits-desc">
-                            Мы помогаем вам и оказываем первоначальную поддержку бесплатно
-                        </p>
+                    <div class="best__benefits-cards">
+                        <img src="img/svg/speedometer.svg" alt="" class="best__benefits-img">
+                        <div class="best__benefits-body">
+                            <p class="best__benefits-title">Скорость</p>
+                            <p class="best__benefits-desc">
+                                Вы всегда сможете посчитать, насколько
+                                увеличится ваша конверсия после переезда к нам
+                            </p>
+                        </div>
+                    </div>
+                    <div class="best__benefits-cards">
+                        <img src="img/svg/networking.svg" alt="" class="best__benefits-img">
+                        <div class="best__benefits-body">
+                            <p class="best__benefits-title">Техподдержка 24/7</p>
+                            <p class="best__benefits-desc">
+                                Мы помогаем вам и оказываем первоначальную поддержку бесплатно
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="stock">
-            <div class="stock__wrapper">
+            <div class="stock__wrap">
                 <div class="stock__cards owl-carousel owl-theme">
                     <div class="stock__card stock__card1">
                         <div class="stock__card-base">
@@ -428,60 +444,62 @@
                     У нас можно оплатить с помощью
                 </div>
                 <div class="stock__pay-payments">
-                    <img src="img/svg/pay_all.svg" alt="">
+                    <img src="img/svg/pay_group.svg" alt="">
                 </div>
             </div>
         </section>
         <section class="news">
             <div class="news__wrap">
-                <h2 class="news__title">
-                    Новости
-                </h2>
-                <a href="#" class="news__title-link">Все новости</a>
-            </div>
-            <div class="news__cards">
-                <div class="news__card">
-                    <img src="img/news_photo1.jpg" alt="" class="news__card-img">
-                    <div class="news__card-body">
-                        <h3 class="news__card-title">Конструктор или CMS: выбираем инструменты для создания сайта</h3>
-                        <p class="news__card-desc">
-                            Сегодня у каждого бизнеса должен быть собственный сайт.
-                            И это не преувеличение: если вы хотите продавать и привлекать клиентов,
-                            то он вам просто необходим.</p>
-                        <div class="news__card-footer">
+                <div class="news__title-wrap">
+                    <h2 class="news__title">
+                        Новости
+                    </h2>
+                    <a href="#" class="news__title-link">Все новости</a>
+                </div>
+                <div class="news__cards">
+                    <div class="news__card">
+                        <img src="img/news_photo1.jpg" alt="" class="news__card-img">
+                        <div class="news__card-body">
+                            <h3 class="news__card-title">Конструктор или CMS: выбираем инструменты для создания сайта</h3>
+                            <p class="news__card-desc">
+                                Сегодня у каждого бизнеса должен быть собственный сайт.
+                                И это не преувеличение: если вы хотите продавать и привлекать клиентов,
+                                то он вам просто необходим.</p>
+                            <div class="news__card-footer">
                                 <img class="news__card-footer_img" src="img/svg/date.svg" alt="">
                                 <p>4 февраля 2022</p>
-                            <a href="#"><img class="news__card-footer_img" src="img/svg/news-arrow-right.svg" alt=""></a>
+                                <a href="#"><img class="news__card-footer_img" src="img/svg/news-arrow-right.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="news__card">
-                    <img src="img/news_photo2.jpg" alt="" class="news__card-img">
-                    <div class="news__card-body">
-                        <h3 class="news__card-title">Что такое лендинг и для каких целей его используют</h3>
-                        <p class="news__card-desc">
-                            Landing page — это страничка, которая нацелена на продвижение
-                            одного конкретного товара или предложения.
-                            Она может располагаться внутри действующего портала…</p>
-                        <div class="news__card-footer">
+                    <div class="news__card">
+                        <img src="img/news_photo2.jpg" alt="" class="news__card-img">
+                        <div class="news__card-body">
+                            <h3 class="news__card-title">Что такое лендинг и для каких целей его используют</h3>
+                            <p class="news__card-desc">
+                                Landing page — это страничка, которая нацелена на продвижение
+                                одного конкретного товара или предложения.
+                                Она может располагаться внутри действующего портала…</p>
+                            <div class="news__card-footer">
                                 <img class="news__card-footer_img" src="img/svg/date.svg" alt="">
                                 <p>1 февраля 2022</p>
-                            <a href="#"><img src="img/svg/news-arrow-right.svg" alt=""></a>
+                                <a href="#"><img src="img/svg/news-arrow-right.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="news__card">
-                    <img src="img/news_photo3.jpg" alt="" class="news__card-img">
-                    <div class="news__card-body">
-                        <h3 class="news__card-title">Права на доменное имя в Украине: как сохранить свой домен</h3>
-                        <p class="news__card-desc">
-                            Доменным именем называют символьное обозначение,
-                            которое служит для идентификации сайта.
-                            Обычно оно состоит из букв, но в нем могут применяться и цифры...</p>
-                        <div class="news__card-footer">
+                    <div class="news__card">
+                        <img src="img/news_photo3.jpg" alt="" class="news__card-img">
+                        <div class="news__card-body">
+                            <h3 class="news__card-title">Права на доменное имя в Украине: как сохранить свой домен</h3>
+                            <p class="news__card-desc">
+                                Доменным именем называют символьное обозначение,
+                                которое служит для идентификации сайта.
+                                Обычно оно состоит из букв, но в нем могут применяться и цифры...</p>
+                            <div class="news__card-footer">
                                 <img class="news__card-footer_img" src="img/svg/date.svg" alt="">
                                 <p>26 января 2022</p>
-                            <a href="#"><img src="img/svg/news-arrow-right.svg" alt=""></a>
+                                <a href="#"><img src="img/svg/news-arrow-right.svg" alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -489,7 +507,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__wrapper">
+        <div class="footer__wrap">
             <div class="footer__input-search">
                 <form action="#" class="footer__search-form">
                     <input type="text" class="footer__input-field" placeholder="Подпишитесь на рассылку">
@@ -506,15 +524,12 @@
             </div>
             <div class="footer__title">
                 <h2 class="footer__title-text">Современный хостинг</h2>
-                <div >
-                    <form class="footer__login" action="">
-                        <img class="header__login-img" src="img/svg/login.svg" alt=""><button class="footer__button" >
-                            Войти в кабинет
-                        </button>
-                    </form>
-                </div>
+                <form class="footer__login" action="">
+                    <img class="header__login-img" src="img/svg/login.svg" alt=""><button class="footer__button" >
+                        Войти в кабинет
+                    </button>
+                </form>
             </div>
-
             <div class="footer__body">
                 <div class="footer__body-column">
                     <h2 class="footer__body-title">Услуги</h2>
@@ -542,9 +557,9 @@
                 <div class="footer__body-column">
                     <h2 class="footer__body-title">Контакты</h2>
                     <div class="footer__body-ul">
-                        <div class="footer__body-li_contacts"><div class="header__link-phone">0 800 33 6782</div></div>
-                        <div class="footer__body-li_contacts"><a href="mailto:info@onehostplanet.com"></a>info@onehostplanet.com</div>
-                        <div class="footer__body-li_contacts"><img src="img/svg/pay_all.svg" alt=""></div>
+                        <div class="footer__body-li_contacts"><a href="tel:0800336782" class="header__link-phone">0 800 33 6782</a></div>
+                        <div class="footer__body-li_contacts"><a href="mailto:info@onehostplanet.com">info@onehostplanet.com</a></div>
+                        <div class="footer__body-li_contacts"><img src="img/svg/pay_group.svg" alt=""></div>
                     </div>
                 </div>
             </div>
