@@ -85,7 +85,7 @@
 
     }
 
-    .sidenav__language {
+    .sidenav__currency {
         margin-top: 168px;
         text-align: center;
     }
@@ -109,6 +109,8 @@
         transform: rotate(180deg);
     }
 
+/* dropdown sidenav currency */
+
     .sidenav__dropbtn {
         background-color: transparent;
         color: black;
@@ -130,13 +132,14 @@
     }
 
     .overlay__footer .sidenav__dropdown{
-        width: 52px;
+        width: 35px;
     }
 
     .sidenav__dropdown {
         width: 100px;
         position: relative;
         display: inline-block;
+
     }
 
     .sidenav__dropdown-content {
@@ -157,11 +160,6 @@
         display: block;
     }
 
-
-    .sidenav__dropdown-content a:hover {
-        background-color: transparent;
-    }
-
     .sidenav__dropdown:hover .sidenav__dropdown-content {
         display: block;
     }
@@ -171,9 +169,8 @@
         text-decoration: none;
         background-color: #1A2298;
         min-width: 100px;
+        transition:all 1s ease;
     }
-
-
 
     /* The sidenav end*/
 
@@ -254,11 +251,32 @@
         align-items: center;
     }
 
+    .header__language  a{
+        font-size: 15px;
+    }
+
+    .header__language .sidenav__dropdown-content{
+        min-width: 40px;
+        background-color: transparent;
+    }
+
+    .header__language .sidenav__dropdown{
+        width: auto;
+        background-color: transparent;
+    }
+
+    .header__language .sidenav__dropdown:hover .sidenav__dropbtn{
+        min-width: 40px;
+        background-color: transparent;
+    }
+
 
     .header__menu-button{
         display: none;
     }
 
+
+    /* dropdown contacts */
     .dropbtn {
         background-color: transparent;
         color: white;
@@ -276,7 +294,6 @@
     }
 
     .dropdown {
-        /*width: 270px;*/
         position: relative;
         display: inline-block;
     }
@@ -315,9 +332,13 @@
         text-decoration: none;
     }
 
-    .dropdown-content a:hover {background-color: transparent;}
+    .dropdown-content a:hover {
+        background-color: transparent;
+    }
 
-    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
     .dropdown:hover .dropbtn {
         color: #0090F0;
@@ -468,14 +489,11 @@
         background: #0090F0;
     }
 
-    .search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active {
-        background: #617da3;
-    }
-
 
 /* intro styles end */
 
 /* best styles start */
+
     .best__wrap{
         margin-top: 745px;
         margin-left: 240px;
@@ -484,7 +502,6 @@
         flex-wrap: wrap;
         align-items: end;
         justify-content: space-between;
-
     }
 
     .best__title{
@@ -729,7 +746,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 20px;
         color: #FFFFFF;
-
     }
 
     .stock__card{
@@ -824,71 +840,11 @@
         height: 56px;
     }
 
-
 /* stock styles end */
 
-/* slider styles start */
-
-    /* Slideshow container */
-    .slideshow-container {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    }
-
-    /* Next & previous buttons */
-    .prev, .next {
-        cursor: pointer;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-
-    /* Caption text */
-    .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Fading animation */
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-
-
-
-/* slider styles end */
 
 /* news styles start */
+
     .news__wrap{
         margin-top: 99px;
         margin-left: 240px;
@@ -916,7 +872,6 @@
         text-decoration: none;
     }
 
-
     .news__cards{
         display: flex;
         grid-column-gap: 20px;
@@ -928,10 +883,6 @@
     .news__card{
         width: 500px;
         background-color: white;
-    }
-
-    .news__card-img{
-
     }
 
     .news__card-body{
@@ -1122,6 +1073,8 @@
         color: #0090F0;
     }
 
+    /* footer styles end */
+
     /* The Overlay (background) */
     .overlay {
         height: 0;
@@ -1170,9 +1123,7 @@
         transition: 0.3s;
     }
 
-    .overlay-content .overlay__phone{
-        display: none;
-    }
+
 
     .overlay__footer{
         margin-left: 30px;
@@ -1219,28 +1170,44 @@
 }
 
 @media (max-width: 1600px) {
-    .header__item {
-        margin-right: 20px;
-    }
+
     .header__language {
         margin-right: 20px;
     }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1550px) {
 
     .sidenav__list{
         display: none;
     }
 
+    .sidenav__dropdown:hover .sidenav__dropbtn {
+        color: #0090F0;
+        text-decoration: none;
+        background-color: #1A2298;
+        min-width: auto;
+    }
+
+    .sidenav__dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #1A2298;
+        margin-left: 6px;
+        min-width: auto;
+        z-index: 1;
+        top: -200%;
+    }
+
     /* header+intro styles start */
 
-    .header__nav .header__list{
-        display: none;
-    }
 
     .header__logo{
         display: contents;
+    }
+
+    .dropbtn{
+        display: none;
     }
 
     .header__language {
@@ -1265,8 +1232,12 @@
 
     .header__item{
         display: inline-flex;
-        margin-right: 30px;
+        margin-right: 40px;
         align-items: flex-end;
+    }
+
+    .overlay__content-list{
+        display: none;
     }
 
     .overlay__login .footer__button{
@@ -1276,7 +1247,6 @@
     .intro__input-field {
         padding-left: 40px;
     }
-
 
     .wrapper {
         margin-left: 90px;
@@ -1315,6 +1285,18 @@
     .wrapper {
         margin-left: 30px;
         margin-right: 30px;
+    }
+
+    .header__item{
+        display: none;
+    }
+
+    .overlay__content-contacts{
+        display: none;
+    }
+
+    .overlay__content-list{
+        display: block;
     }
 
     .best__wrap {
@@ -1568,12 +1550,11 @@
 
     .header__menu-button {
         width: 30px;
-        margin-right: 20px;
+        margin-right: 30px;
     }
 
     .header__menu-button img {
         height: 40px;
-        margin-right: 20px;
     }
 
     .overlay__menu .footer__button {
@@ -1593,6 +1574,7 @@
     }
 
     .overlay__menu {
+        align-items: center;
         margin-top: 42px;
         margin-right: 20px;
     }
@@ -2203,7 +2185,7 @@
     }
 
     .overlay__menu {
-        margin-top: 29px;
+        margin-top: 27px;
         margin-right: 20px;
     }
 
@@ -2218,6 +2200,18 @@
 
     .overlay .closebtn img{
         width: 30px;
+    }
+
+    .overlay__footer .sidenav__dropdown {
+        width: 32px;
+    }
+
+    .sidenav__dropbtn{
+        font-size: 16px;
+    }
+
+    .sidenav__dropdown-content a{
+        font-size: 16px;
     }
 
     .wrapper{

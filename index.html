@@ -33,16 +33,26 @@
 
         <div class="overlay-content">
             <form class="overlay__login" action="">
-                <button class="footer__button"><img class="header__login-img" src="img/svg/login.svg" alt="">Войти
-                    в кабинет
+                <button class="footer__button">
+                    <img class="header__login-img" src="img/svg/login.svg" alt="">
+                    Войти в кабинет
                 </button>
             </form>
-            <a href="#">Хостинг</a>
-            <a href="#">VPS</a>
-            <a href="#">Выделенный сервер</a>
-            <a href="#">Домены</a>
-            <a href="#">FAQ</a>
-            <a class="overlay__phone">0 800 33 6782</a>
+            <div class="overlay__content-list">
+                <a href="#">Хостинг</a>
+                <a href="#">VPS</a>
+                <a href="#">Выделенный сервер</a>
+                <a href="#">Домены</a>
+                <a href="#">FAQ</a>
+                <a class="overlay__phone" href="tel:0 800 33 6782">0 800 33 6782</a>
+            </div>
+            <div class="overlay__content-contacts">
+                <a href="tel:0 800 33 6782">0 800 33 6782</a>
+                <a href="tel:044 333 45 32">044 333 45 32</a>
+                <a href="#">Обратный звонок</a>
+                <a href="mailto:info@onehostplanet.com">info@onehostplanet.com</a>
+            </div>
+
         </div>
 
         <div class="overlay__footer">
@@ -61,11 +71,10 @@
     </div>
         <div class="header__nav">
             <div class="sidenav__list">
-                <div class="sidenav__language">
+                <div class="sidenav__currency">
                     <div class="sidenav__dropdown">
                         <button class="sidenav__dropbtn">UAH</button>
                         <div class="sidenav__dropdown-content">
-                            <a href="#">UAH</a>
                             <a href="#">RUB</a>
                             <a href="#">USD</a>
                             <a href="#">EUR</a>
@@ -80,10 +89,10 @@
             </div>
             <nav-list>
                 <div class="header__logo">
-                    <a href="/" class="header__logo-link">
+                    <a href="#" class="header__logo-link">
                         <img src="./img/svg/Onehost_logo_img.svg" alt="" class="header__logo-pic">
                     </a>
-                    <a href="/" class="header__logo-link">
+                    <a href="#" class="header__logo-link">
                         <img src="./img/svg/Onehost_logo_text.svg" alt="" class="header__logo-text">
                     </a>
                 </div>
@@ -121,7 +130,15 @@
 
                 <div class="header__link-wrap">
                     <div class="header__language">
-                        <img class="header__language-img" src="img/svg/language.svg" alt="">
+                        <div class="sidenav__dropdown">
+                            <button class="sidenav__dropbtn">
+                                <img class="header__language-img" src="img/svg/language.svg" alt="">
+                            </button>
+                            <div class="sidenav__dropdown-content">
+                                <a href="">RU<img class="header__language-img" src="img/svg/language.svg" alt=""></a>
+                                <a href="">UA<img class="header__language-img" src="img/svg/language_ua.png" alt=""></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="header_login">
                         <form action="">
