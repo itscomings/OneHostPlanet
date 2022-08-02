@@ -16,7 +16,8 @@
 <body>
 
 <header id="header" class="header">
-    <!-- The overlay -->
+
+    <!-- Start MENU overlay -->
     <div id="myNav" class="overlay">
         <div class="overlay__menu">
             <h1>Menu</h1>
@@ -25,12 +26,11 @@
                     в кабинет
                 </button>
             </form>
+            <!-- Button to close the overlay navigation -->
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/svg/nav_menu_colse.svg" alt=""></a>
-            <!-- Overlay content -->
         </div>
 
-        <!-- Button to close the overlay navigation -->
-
+        <!-- Start overlay content -->
         <div class="overlay-content">
             <form class="overlay__login" action="">
                 <button class="footer__button">
@@ -38,6 +38,8 @@
                     Войти в кабинет
                 </button>
             </form>
+
+            <!-- Start base menu -->
             <div class="overlay__content-list">
                 <a href="#">Хостинг</a>
                 <a href="#">VPS</a>
@@ -46,30 +48,48 @@
                 <a href="#">FAQ</a>
                 <a class="overlay__phone" href="tel:0 800 33 6782">0 800 33 6782</a>
             </div>
+            <!-- End base menu -->
+
+            <!-- Start contacts menu -->
             <div class="overlay__content-contacts">
                 <a href="tel:0 800 33 6782">0 800 33 6782</a>
                 <a href="tel:044 333 45 32">044 333 45 32</a>
                 <a href="#">Обратный звонок</a>
                 <a href="mailto:info@onehostplanet.com">info@onehostplanet.com</a>
             </div>
-
+            <!-- End contacts menu -->
         </div>
+        <!-- End overlay content -->
 
+        <!-- Start footer menu -->
         <div class="overlay__footer">
             <div class="sidenav__dropdown">
                 <button class="sidenav__dropbtn">UAH</button>
                 <div class="sidenav__dropdown-content">
-                    <a href="#">UAH</a>
                     <a href="#">RUB</a>
                     <a href="#">USD</a>
                     <a href="#">EUR</a>
                 </div>
             </div>
-            <img src="img/svg/language.svg" alt="">
-            <img src="img/svg/chat_1.svg" alt="">
+            <a href=""><img src="img/svg/chat_1.svg" alt=""></a>
+            <div class="sidenav__dropdown">
+                <button class="sidenav__dropbtn">
+                    <img class="header__language-img" src="img/svg/language_ua.png" alt="">
+                </button>
+                <div class="sidenav__dropdown-content">
+                    <a href="">RU<img class="header__language-img" src="img/svg/language.svg" alt=""></a>
+                    <a href="">UA<img class="header__language-img" src="img/svg/language_ua.png" alt=""></a>
+                </div>
+            </div>
         </div>
+        <!-- End footer menu -->
+
     </div>
+    <!-- End MENU overlay -->
+
         <div class="header__nav">
+
+            <!-- Sidenav section -->
             <div class="sidenav__list">
                 <div class="sidenav__currency">
                     <div class="sidenav__dropdown">
@@ -81,12 +101,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="sidenav__chat"><img src="./img/svg/chat_1.svg" alt=""></div>
+                <div class="sidenav__chat">
+                    <a href=""><img src="./img/svg/chat_1.svg" alt=""></a>
+                </div>
                 <div class="sidenav__up">
                     <img src="./img/svg/right-arrow.svg" alt="">
                     <a href="#header">Наверх</a>
                 </div>
             </div>
+            <!-- End sidenav section -->
+
+            <!-- Start base header section -->
             <nav-list>
                 <div class="header__logo">
                     <a href="#" class="header__logo-link">
@@ -116,9 +141,7 @@
                     </ul>
                 </div>
 
-
-                <!-- Show the hover phone menu -->
-
+                <!-- Start hover phone menu -->
                 <div class="dropdown">
                     <button class="dropbtn">0 800 33 6782</button>
                     <div class="dropdown-content">
@@ -127,19 +150,26 @@
                         <a href="mailto:info@onehostplanet.com">info@onehostplanet.com</a>
                     </div>
                 </div>
+                <!-- End hover phone menu -->
 
                 <div class="header__link-wrap">
                     <div class="header__language">
+
+                        <!-- Start hover language menu -->
                         <div class="sidenav__dropdown">
                             <button class="sidenav__dropbtn">
-                                <img class="header__language-img" src="img/svg/language.svg" alt="">
+                                <img class="header__language-img" src="img/svg/language_ua.png" alt="">
                             </button>
                             <div class="sidenav__dropdown-content">
                                 <a href="">RU<img class="header__language-img" src="img/svg/language.svg" alt=""></a>
                                 <a href="">UA<img class="header__language-img" src="img/svg/language_ua.png" alt=""></a>
                             </div>
                         </div>
+                        <!-- End hover language menu -->
+
                     </div>
+
+                    <!-- Start login button -->
                     <div class="header_login">
                         <form action="">
                             <button class="header__button">
@@ -148,12 +178,15 @@
                             </button>
                         </form>
                     </div>
+                    <!-- End login button -->
+
                 </div>
 
                 <!-- Open/show the overlay navigation menu -->
 
                 <span class="header__menu-button" onclick="openNav()"><img src="img/svg/nav_menu.svg" alt=""></span>
             </nav-list>
+            <!-- End base header section -->
 
         </div>
     </header>
@@ -204,7 +237,6 @@
                             <button class="intro__input-button">Найти</button>
                         </form>
                     </div>
-
             </div>
         </section>
         <section class="best">
@@ -582,7 +614,7 @@
             </div>
             <div class="footer__foot">
                 <p>© Onehostplanet 2018-2022</p>
-                <img src="img/svg/language.svg" alt="">
+                <img src="img/svg/language_ua.png" alt="">
             </div>
         </div>
     </footer>

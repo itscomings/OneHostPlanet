@@ -44,6 +44,7 @@
     }
 
     html {
+        scroll-behavior: smooth;
         box-sizing: border-box;
     }
 
@@ -95,7 +96,6 @@
     }
 
     .sidenav__up {
-
         display: inline-flex;
         margin-top: 168px;
         writing-mode: vertical-lr;
@@ -111,6 +111,15 @@
 
 /* dropdown sidenav currency */
 
+    .overlay__footer .sidenav__dropbtn {
+        color: white;
+        text-decoration-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .overlay__footer .sidenav__dropdown{
+        width: 35px;
+    }
+
     .sidenav__dropbtn {
         background-color: transparent;
         color: black;
@@ -125,25 +134,15 @@
         border: none;
     }
 
-    .overlay__footer .sidenav__dropbtn {
-        color: white;
-        text-decoration-color: rgba(255, 255, 255, 0.5);
-
-    }
-
-    .overlay__footer .sidenav__dropdown{
-        width: 35px;
-    }
-
     .sidenav__dropdown {
         width: 100px;
         position: relative;
         display: inline-block;
-
     }
 
     .sidenav__dropdown-content {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         position: absolute;
         background-color: #1A2298;
         min-width: 100px;
@@ -161,7 +160,9 @@
     }
 
     .sidenav__dropdown:hover .sidenav__dropdown-content {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s ease;
     }
 
     .sidenav__dropdown:hover .sidenav__dropbtn {
@@ -169,7 +170,7 @@
         text-decoration: none;
         background-color: #1A2298;
         min-width: 100px;
-        transition:all 1s ease;
+        transition: all .5s ease;
     }
 
     /* The sidenav end*/
@@ -236,6 +237,13 @@
         text-decoration: none;
     }
 
+    .header__link:hover, .header__link:focus, .header__link:active {
+        border-radius: 3px;
+        text-shadow: 0 0 15px #10fff7;
+        transition: all .35s ease;
+        color: #00c4f0;
+    }
+
     .header__link-phone {
         font-size: 24px;
         line-height: 28px;
@@ -294,23 +302,26 @@
     }
 
     .dropdown {
+        width: 230px;
         position: relative;
         display: inline-block;
     }
 
     .dropdown-content {
-        display: none;
+
         position: absolute;
         background-color: #1A2298;
-        min-width: 270px;
+        min-width: 230px;
         z-index: 1;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .dropdown-content a {
         color: white;
         padding-top: 14px;
         padding-left: 30px;
-        font-size: 18px;
+        font-size: 15px;
         line-height: 21px;
         text-decoration: dashed underline;
         text-underline-offset: 5px;
@@ -318,6 +329,7 @@
         text-decoration-color: rgba(255, 255, 255, 0.5);
         display: block;
     }
+
     .dropdown-content a:first-child{
         padding-top: 0;
         font-size: 23px;
@@ -332,21 +344,20 @@
         text-decoration: none;
     }
 
-    .dropdown-content a:hover {
-        background-color: transparent;
-    }
-
     .dropdown:hover .dropdown-content {
         display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s ease;
     }
 
     .dropdown:hover .dropbtn {
         color: #0090F0;
         text-decoration: none;
         background-color: #1A2298;
-        min-width: 270px;
+        min-width: 230px;
+        transition: all .5s ease;
     }
-
 
     .header__language {
         margin-left: auto;
@@ -363,12 +374,20 @@
         border: none;
     }
 
-    .header__login-img {
-        margin-right: 14px;
+    .header__button:hover, .header__button:focus, .header__button:active {
+        border-radius: 3px;
+        text-shadow: 0 0 15px #10fff7;
+        transition: all .35s ease;
+        color: #00c4f0;
     }
 
-    .header__link:hover, .header__link:focus, .header__link:active {
-        opacity: .75;
+    .header__button a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .header__login-img {
+            margin-right: 14px;
     }
 
     /* header styles end */
@@ -1132,6 +1151,7 @@
         margin-bottom: 60px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .overlay__footer a {
@@ -1169,11 +1189,16 @@
 
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1665px) {
 
     .header__language {
-        margin-right: 20px;
+        margin-right: 15px;
     }
+
+    .header__button{
+        margin-right: 40px;
+    }
+
 }
 
 @media (max-width: 1550px) {
@@ -1190,13 +1215,12 @@
     }
 
     .sidenav__dropdown-content {
-        display: none;
         position: absolute;
         background-color: #1A2298;
         margin-left: 6px;
         min-width: auto;
         z-index: 1;
-        top: -200%;
+        top: -215%;
     }
 
     /* header+intro styles start */
@@ -1231,6 +1255,7 @@
     }
 
     .header__item{
+        width: max-content;
         display: inline-flex;
         margin-right: 40px;
         align-items: flex-end;
@@ -1305,7 +1330,6 @@
 
     .stock__wrap{
         margin-left: 30px;
-
     }
 
     .stock__pay{
@@ -1549,7 +1573,6 @@
     }
 
     .header__menu-button {
-        width: 30px;
         margin-right: 30px;
     }
 
@@ -1570,13 +1593,12 @@
     }
 
     .overlay__menu h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .overlay__menu {
         align-items: center;
         margin-top: 42px;
-        margin-right: 20px;
     }
 
     .overlay-content {
@@ -1599,6 +1621,11 @@
 
     .overlay .closebtn img {
         width: 40px;
+    }
+
+    .sidenav__dropbtn, .sidenav__dropdown-content a{
+        font-size: 16px;
+        line-height: 18px;
     }
 
     .wrapper {
@@ -2032,6 +2059,48 @@
 
 @media (max-width: 470px) {
 
+    .header__logo-pic {
+        margin-top: 12px;
+        height: 95px;
+    }
+
+    .header__logo-text {
+        margin-left: 0;
+        height: 13px;
+    }
+
+    .header__menu-button {
+        margin-right: 25px;
+    }
+
+    .header__menu-button img {
+        height: 35px;
+    }
+
+    .overlay__menu h1 {
+        font-size: 25px;
+    }
+
+    .overlay__menu {
+        margin-top: 36px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .overlay .closebtn img {
+        width: 35px;
+    }
+
+    .overlay__footer{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .sidenav__dropbtn, .sidenav__dropdown-content a{
+        font-size: 16px;
+        line-height: 18px;
+    }
+
     .intro__input-search {
         display: block;
         position: relative;
@@ -2061,6 +2130,7 @@
     .stock__wrap {
         margin-left: 25px;
     }
+
     .owl-carousel .owl-item img:nth-child(1) {
         width: 23px;
     }
@@ -2167,13 +2237,11 @@
     }
 
     .header__menu-button{
-        width: 30px;
         margin-right: 20px;
     }
 
     .header__menu-button img{
         height: 30px;
-        margin-right: 20px;
     }
 
     .overlay__menu .footer__button{
@@ -2187,6 +2255,7 @@
     .overlay__menu {
         margin-top: 27px;
         margin-right: 20px;
+        margin-left: 20px;
     }
 
     .overlay-content {
