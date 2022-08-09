@@ -220,12 +220,13 @@
         z-index: inherit;
     }
 
-    .header__logo-text {
-        margin-left: -5px;
-    }
     .header__logo-pic {
         margin-top: 12px;
         margin-left: 18px;
+    }
+
+    .header__logo-text {
+        margin-left: -5px;
     }
 
     .header__item {
@@ -1269,7 +1270,7 @@
         display: contents;
     }
 
-    .dropbtn{
+    .dropdown{
         display: none;
     }
 
